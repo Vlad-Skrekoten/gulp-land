@@ -1,0 +1,31 @@
+@mixin button ($color: $black, $background: $white) {
+    font-size: 17px;
+    color: $black;
+    background: $white;
+    width: 180px;
+    height: 60px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+@mixin rectangle {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background: var(--fill-color-1-white, #FFF);
+    border-radius: 50%;
+}
+
+
+@mixin triangle {
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-bottom-width: 18px;
+    border-top-width: 18px;
+    border-left: 30px solid black;
+}
+
+@mixin margin {
+    margin-top: 190px;
+}

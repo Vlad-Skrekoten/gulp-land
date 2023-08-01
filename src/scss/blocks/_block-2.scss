@@ -1,0 +1,37 @@
+.main_block-2 {
+    @include margin;
+    display: flex;
+    justify-content: center;
+    padding: 0 2%;
+}
+
+.content_block-2 {
+    max-width: 1600px;
+    width: calc(300px + 900 * (100vw / 1600));
+    height: 630px;
+    background: url("../img/Video.svg");
+    background-repeat:no-repeat;
+    background-position:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stop {
+    @include rectangle;
+    transition: background-color $transition, transform $transition;
+
+    &:hover {
+        background: $black;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.triangle {
+    @include triangle;
+    margin-top: 33%;
+    margin-left: 40%;
+}

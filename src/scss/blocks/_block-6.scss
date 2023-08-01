@@ -1,0 +1,44 @@
+.main_block-6 {
+    @include margin;
+    padding: 0 5%;
+    display: grid;
+    justify-content: center;
+}
+
+.type_block-6 {
+    padding: 40px 0;
+    border-top: 1px solid rgba(29, 29, 31, 0.4);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1600px;
+}
+
+.title_block-6 {
+    color: $black;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 130%;
+    transition: color $transition;
+
+    &:hover {
+        color: $grey;
+    }
+}
+
+.text_block-6 {
+    width: 100%;
+    max-width: 570px;
+    color: $grey;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+@media (max-width:400px) {
+    .type_block-6 {
+        grid-template-columns: auto;
+        justify-items: center;
+        text-align: center;
+        gap: 5%;
+    }
+}

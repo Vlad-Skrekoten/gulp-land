@@ -1,0 +1,88 @@
+footer {
+    @include margin;
+    background: $black;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    max-width: 1600px;
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    gap: calc(1px + 179 * (100vw / 1600));
+}
+
+.address {
+    width: calc(100px + 470 *(100vw/1600));
+    margin-top: 48px;
+    color: grey;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.text_footer {
+    width: calc(100px + 470 *(100vw/1600));
+    color: $white;
+    font-size: calc(20px + 12 *(100vw/1600));
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.email_footer {
+    width: 100%;
+    max-width: 570px;
+    margin-top: 35px;
+    color: $grey;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.04px;
+    text-transform: uppercase;
+}
+
+.email {
+    width: 100%;
+    max-width: 500px;
+    color: $grey;
+    background: $black;
+}
+
+.block_icons {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 20px;
+}
+
+.icons svg path {
+    transition: fill $transition;
+
+    &:hover {
+        fill: $grey;
+    }
+}
+
+.right_footer,
+.left_footer {
+    display: grid;
+    justify-content: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+@media (max-width:1100px) {
+    .footer {
+        grid-template-columns: auto;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .block_icons {
+        justify-content: center;
+        margin: 5%;
+    }
+}

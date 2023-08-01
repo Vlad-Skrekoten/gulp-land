@@ -1,0 +1,11 @@
+.main_block-5 {
+    @include margin;
+    display: flex;
+    justify-content: center;
+}
+
+.building {
+    width: 100%;
+    max-width: 1600px;
+    background-position: center;
+}

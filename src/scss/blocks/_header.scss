@@ -1,0 +1,156 @@
+@import"./utils/variable";
+@import"./utils/mixins";
+
+.container {
+    max-width: 1600px;
+    width: 100%;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    background: url("../img/Rectangle.svg") center/auto 100% no-repeat;
+}
+
+.nav_row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 51px;
+    margin-bottom: 49px;
+}
+
+.logo {
+    color: $white;
+
+    font-size: calc(20px + 12 * (100vw / 1600));
+    font-weight: 500;
+    line-height: 130%;
+    cursor: pointer;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    gap: 35px;
+}
+
+.link {
+    transition: transform $transition;
+    text-align: center;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(1.0);
+    }
+}
+
+
+.a_link {
+    color: $white;
+    transition: color $transition;
+}
+
+.button_header {
+    @include button ($black, $white);
+    transition: color $transition, transform $transition;
+
+    &:hover {
+        color: $white;
+        background: $black;
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(1.0);
+    }
+}
+
+.content {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 30px;
+    width: 100%;
+    max-width: 936px;
+    margin-left: 200px;
+    padding-bottom: 211px;
+
+    .title {
+        color: $white;
+        font-size: calc(40px + 56 * (100vw / 1600));
+        font-weight: 600;
+    }
+
+    .text {
+        color: $white;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}
+
+@media (max-width:1440px) {
+    .content {
+        margin-left: 0;
+        padding-left: calc(50px + 150 * (100vw / 1440));
+        padding-right: 5%;
+    }
+}
+
+.menu {
+    width: 50px;
+    height: 40px;
+    display: grid;
+    justify-content: center;
+    align-items:center;
+    display: none;
+}
+
+.menu_box {
+    display: grid;
+    gap:6px;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    border-radius: 10px;
+    background: $white;
+}
+
+
+
+@media (max-width:760px) {
+
+    .nav_row {
+        padding: 0 5%;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .content {
+        margin: 0;
+        justify-items: center;
+        padding: 5%;
+    }
+
+    .title,
+    .text {
+        text-align: center;
+    }
+
+    .text {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .menu {
+        display: grid;
+    }
+}

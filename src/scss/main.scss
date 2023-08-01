@@ -1,0 +1,16 @@
+@import "./blocks/header";
+@import "./blocks/footer";
+@import "./blocks/block-1";
+@import "./blocks/block-2";
+@import "./blocks/block-3";
+@import"./blocks/block-4";
+@import"./blocks/block-5";
+@import"./blocks/block-6";
+@import "./blocks/container";
+
+
+//utils
+@import "./utils/base";
+@import"./utils/reset";
+@import"./utils/variable";
+@import"./utils/mixins";
